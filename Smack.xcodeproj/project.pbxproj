@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		291D3FCB8F4A2F4C5E5E0890 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F4D4CE60109DDC453D8FAA /* Pods_Smack.framework */; };
 		47C96390204833BB00108EDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C9638F204833BB00108EDF /* AppDelegate.swift */; };
-		47C96392204833BB00108EDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C96391204833BB00108EDF /* ViewController.swift */; };
 		47C96395204833BB00108EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C96393204833BB00108EDF /* Main.storyboard */; };
 		47C96397204833BB00108EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C96396204833BB00108EDF /* Assets.xcassets */; };
 		47C9639A204833BB00108EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C96398204833BB00108EDF /* LaunchScreen.storyboard */; };
 		47C963A520485AE900108EDF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C963A420485AE900108EDF /* SWRevealViewController.m */; };
+		47C963AA2048629400108EDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C963A92048629400108EDF /* ChatViewController.swift */; };
+		47C963AC204862A200108EDF /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C963AB204862A200108EDF /* ChannelViewController.swift */; };
+		47C963AE2049781200108EDF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C963AD2049781200108EDF /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		35F4D4CE60109DDC453D8FAA /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C9638C204833BB00108EDF /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C9638F204833BB00108EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47C96391204833BB00108EDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47C96394204833BB00108EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47C96396204833BB00108EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47C96399204833BB00108EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +29,9 @@
 		47C963A220485AE800108EDF /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		47C963A320485AE900108EDF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		47C963A420485AE900108EDF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		47C963A92048629400108EDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		47C963AB204862A200108EDF /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		47C963AD2049781200108EDF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		CF2A71ED4496404CA231B9F1 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		E92CC11B3082056222AA82BF /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,9 +77,11 @@
 		47C9638E204833BB00108EDF /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				47C963A82048626E00108EDF /* Model */,
+				47C963A72048625E00108EDF /* View */,
+				47C963A62048624F00108EDF /* Controller */,
 				47C963A120485A5100108EDF /* Supporting Files */,
 				47C9638F204833BB00108EDF /* AppDelegate.swift */,
-				47C96391204833BB00108EDF /* ViewController.swift */,
 				47C96393204833BB00108EDF /* Main.storyboard */,
 				47C96396204833BB00108EDF /* Assets.xcassets */,
 				47C96398204833BB00108EDF /* LaunchScreen.storyboard */,
@@ -92,6 +98,30 @@
 				47C963A220485AE800108EDF /* Smack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47C963A62048624F00108EDF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47C963A92048629400108EDF /* ChatViewController.swift */,
+				47C963AB204862A200108EDF /* ChannelViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47C963A72048625E00108EDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47C963AD2049781200108EDF /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47C963A82048626E00108EDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E561458E07B597D4BB8022EB /* Pods */ = {
@@ -239,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47C96392204833BB00108EDF /* ViewController.swift in Sources */,
 				47C96390204833BB00108EDF /* AppDelegate.swift in Sources */,
+				47C963AA2048629400108EDF /* ChatViewController.swift in Sources */,
+				47C963AE2049781200108EDF /* GradientView.swift in Sources */,
+				47C963AC204862A200108EDF /* ChannelViewController.swift in Sources */,
 				47C963A520485AE900108EDF /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
