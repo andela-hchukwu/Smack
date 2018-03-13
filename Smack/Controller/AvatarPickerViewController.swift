@@ -44,6 +44,7 @@ class AvatarPickerViewController: UIViewController, UICollectionViewDelegate, UI
     @IBAction func backPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
     @IBAction func segmentControlChanged(_ sender: Any) {
         if segmentControl.selectedSegmentIndex == 0 {
             avatarType = .dark
