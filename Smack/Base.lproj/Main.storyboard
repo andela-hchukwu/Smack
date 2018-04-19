@@ -620,7 +620,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fd-Lm-eGh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fd-Lm-eGh">
                                                     <rect key="frame" x="77" y="36" width="271" height="18"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -646,6 +646,12 @@
                                                 <constraint firstItem="kgr-Om-n3k" firstAttribute="centerY" secondItem="fv5-Ua-Pgv" secondAttribute="centerY" id="qfu-Ze-KSL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageBodyLabel" destination="8fd-Lm-eGh" id="qsU-rW-PkP"/>
+                                            <outlet property="timeStampLabel" destination="kgr-Om-n3k" id="BrN-ei-DEj"/>
+                                            <outlet property="userImage" destination="hHG-io-eaW" id="jpl-Bn-12O"/>
+                                            <outlet property="userNameLabel" destination="fv5-Ua-Pgv" id="fp5-2I-k4O"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -672,6 +678,7 @@
                         <outlet property="menuButton" destination="9FY-Us-ZMB" id="o27-3j-jzw"/>
                         <outlet property="messageTextField" destination="6ub-Xc-rH6" id="wmD-Yi-l4I"/>
                         <outlet property="sendButton" destination="aKx-2n-tm8" id="0lX-8m-GE9"/>
+                        <outlet property="tableView" destination="oQc-JL-J74" id="fbD-I4-mTI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxJ-EC-bmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
