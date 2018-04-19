@@ -14,11 +14,15 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextField!
-    
+    @IBOutlet weak var sendButton: UIButton!
+
+    var isTyping = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
+
+        sendButton.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.handleTap))
         view.addGestureRecognizer(tap)
         menuButton.addTarget(self.revealViewController(),
@@ -31,6 +35,16 @@ class ChatViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.userDataDidChange), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+//                self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+//                    self.tableView.scrollToRow(at: endIndex,at: .bottom, animated: false)
+                }
+            }
+        }
 
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail(completion: { success in
@@ -45,6 +59,7 @@ class ChatViewController: UIViewController {
             onLoginGetMessages()
         } else {
             channelNameLabel.text = "Please Log In"
+//            tableView.reloadData()
         }
     }
 
@@ -74,6 +89,20 @@ class ChatViewController: UIViewController {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLabel.text = "#\(channelName)"
     }
+
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if messageTextField.text == "" {
+            isTyping = false
+            sendButton.isHidden = true
+        } else {
+            if isTyping == false {
+                sendButton.isHidden = false
+            }
+            isTyping = true
+        }
+
+    }
+
 
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
