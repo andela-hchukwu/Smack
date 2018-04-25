@@ -74,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="125" width="375" height="427"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="T2j-ME-ryW" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="T2j-ME-ryW" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T2j-ME-ryW" id="249-Ot-Bab">
@@ -655,6 +655,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-tc-h56">
+                                <rect key="frame" x="8" y="621" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -665,8 +671,10 @@
                             <constraint firstItem="oQc-JL-J74" firstAttribute="top" secondItem="Pk8-RI-Hqo" secondAttribute="bottom" id="IZE-ZL-jvA"/>
                             <constraint firstItem="6ub-Xc-rH6" firstAttribute="leading" secondItem="3pJ-6d-eOq" secondAttribute="leading" id="QxN-oh-yqb"/>
                             <constraint firstItem="oQc-JL-J74" firstAttribute="leading" secondItem="3pJ-6d-eOq" secondAttribute="leading" id="Ue1-n0-9px"/>
+                            <constraint firstItem="ez9-tc-h56" firstAttribute="leading" secondItem="3pJ-6d-eOq" secondAttribute="leading" constant="8" id="Xc4-g8-evK"/>
                             <constraint firstItem="Pk8-RI-Hqo" firstAttribute="trailing" secondItem="3pJ-6d-eOq" secondAttribute="trailing" id="YiT-Y8-32i"/>
                             <constraint firstItem="Pk8-RI-Hqo" firstAttribute="top" secondItem="JrS-cT-8Sp" secondAttribute="top" id="Zcc-yy-6Du"/>
+                            <constraint firstItem="6ub-Xc-rH6" firstAttribute="top" secondItem="ez9-tc-h56" secondAttribute="bottom" constant="6" id="bmu-wb-uO3"/>
                             <constraint firstItem="3pJ-6d-eOq" firstAttribute="trailing" secondItem="aKx-2n-tm8" secondAttribute="trailing" constant="8" id="fbj-CV-gKL"/>
                             <constraint firstItem="6ub-Xc-rH6" firstAttribute="top" secondItem="oQc-JL-J74" secondAttribute="bottom" constant="30" id="gMA-6b-Xdn"/>
                             <constraint firstItem="6ub-Xc-rH6" firstAttribute="bottom" secondItem="3pJ-6d-eOq" secondAttribute="bottom" id="pc2-D7-wm3"/>
@@ -679,6 +687,7 @@
                         <outlet property="messageTextField" destination="6ub-Xc-rH6" id="wmD-Yi-l4I"/>
                         <outlet property="sendButton" destination="aKx-2n-tm8" id="0lX-8m-GE9"/>
                         <outlet property="tableView" destination="oQc-JL-J74" id="fbD-I4-mTI"/>
+                        <outlet property="typingUsersLabel" destination="ez9-tc-h56" id="YSa-Pc-m7Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxJ-EC-bmf" userLabel="First Responder" sceneMemberID="firstResponder"/>

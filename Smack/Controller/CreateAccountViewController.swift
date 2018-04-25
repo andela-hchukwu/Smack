@@ -106,7 +106,4 @@ class CreateAccountViewController: UIViewController {
         view.endEditing(true)
     }
 
-
-
-
 }
